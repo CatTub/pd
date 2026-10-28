@@ -1,0 +1,1990 @@
+--[[
+	backtrack.tech v1.7c (project_delta) 
+
+	deobfusacted and leaked with 💗 from the Faded.Yarts team
+	apparently the v1.6a build we leaked was sooo outdated, we decided to leak the current version! happy cheating!
+	btw the "dev" of this script is a retard, and his script is pasted asf (a lot of these functions come from existing leaked pd scripts)
+
+	obfuscator: Luraph v15 (loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/111d11f76c987967c0424cb99230d289.lua"))())
+	host: Luarmor
+	deobfuscated on: 10/9/26 & 10/10/26
+
+	also no i didnt have to pay for a key to deob, sorry ws 🤞
+]]--
+
+local r273, r95, r124, r275, r276, r277, r278, r27, r179, r281
+local r282, r283, r284, r285, r286, r26, r287, r155, r25, r28
+local r96, r289, r290, r97, r119, r23, r24, r292, r22, r293
+local r294, r295, r116, r297, r299, r300, r301, r144, r302, r303
+local r304, r305, r306, r307, r308, r309, r310, r311, r312, r313
+local r314, r315, r316, r317, r320, r321, r323, r324, r325, r327
+local r329, r330, r333, r335, r336, r337, r339, r340, r341, r342
+local r343, r344, r1_2, r178, r345, r347, r348, r98, r100, r351
+local r352, r353, r354, r355, r356, r357, r7
+local r11_2, r359, r360, r361, r362
+local r3_7, r2_9, r4_6, r5_1, r363, r370, r118, r120, r121, r122
+local r371, r372, r123, r125, r376, r377, r378, r379, r380, r381
+local r382, r383, r384, r1276, r60_2
+
+do
+	loadstring("        function LPH_NO_VIRTUALIZE(f) return f end;\r\n    ")()
+	getgenv().debug_load = getgenv().debug_load or false
+	if getgenv().backtrack_tech then
+		warn("[backtrack.tech:project_delta] script is already loaded")
+		return
+	end
+	getgenv().backtrack_tech = true
+	local r269
+	r269 = game
+	local r270
+	r270 = r269.PlaceId
+	local r271
+	r271 = r269.JobId
+	local r274, r279, r280, r288
+
+	do
+		local r272 = r269.GetService
+
+		local function r1_1(s4)
+			return cloneref(r272(r269, s4))
+		end
+
+		r273 = r1_1("RunService")
+		r95 = r1_1("Workspace")
+		r124 = r1_1("Lighting")
+		r274 = r1_1("Stats")
+		r275 = r1_1("Players")
+		r276 = r1_1("UserInputService")
+		r1_1("ContextActionService")
+		r277 = r1_1("TextChatService")
+		local r4 = r1_1("GuiService")
+		r278 = r1_1("CoreGui")
+		r1_1("StarterGui")
+		r27 = r1_1("ReplicatedStorage")
+		r279 = r1_1("HttpService")
+		r179 = r1_1("TweenService")
+		r1_1("SoundService")
+		r1_1("Debris")
+		r280 = r1_1("TeleportService")
+		r281 = r275.PlayerAdded
+		r282 = r275.PlayerRemoving
+		r283 = r275.GetPlayers
+		r284 = r95.Raycast
+		r285 = r276.IsKeyDown
+		r286 = r269.IsDescendantOf
+		r26 = r269.FindFirstChild
+		r287 = r269.FindFirstChildOfClass
+		r155 = r269.IsA
+		r25 = r26(r27, "Players")
+		r28 = r26(r95, "Terrain")
+		r96 = r26(r27, "ItemsList")
+		r288 = r4:GetGuiInset().Y
+	end
+
+	r289 = r95.CurrentCamera
+	r290 = r289.WorldToViewportPoint
+	r97 = r275.LocalPlayer
+	r119 = r97.PlayerGui
+	local r291
+	r291 = r97:GetMouse()
+	r23 = Vector2.new
+	r24 = vector.create
+	r292 = vector.magnitude
+	r22 = UDim2.new
+	r293 = UDim.new
+	r294 = Rect.new
+	r295 = UDim2.fromOffset
+	local r296
+	r296 = Color3.new
+	r116 = Color3.fromRGB
+	r297 = Color3.fromHex
+	local r298
+	r298 = Color3.fromHSV
+	r299 = ColorSequence.new
+	r300 = ColorSequenceKeypoint.new
+	r301 = NumberSequence.new
+	r144 = NumberSequenceKeypoint.new
+	r302 = CFrame.Angles
+	CFrame.new()
+	r303 = CFrame.new
+	r304 = math.max
+	r305 = math.floor
+	r306 = math.min
+	r307 = math.abs
+	r308 = math.random
+	r309 = math.sin
+	r310 = math.round
+	r311 = math.clamp
+	r312 = math.deg
+	r313 = math.atan2
+	r314 = math.rad
+	r315 = math.huge
+	r316 = 3.1415926535897931
+	r317 = math.cos
+	local r318
+	r318 = string.find
+	local r319
+	r319 = string.rep
+	r320 = string.lower
+	r321 = string.upper
+	local r322
+	r322 = string.sub
+	r323 = string.format
+	r324 = tostring
+	r325 = tonumber
+	local r10
+	r10 = string.split
+	local r326
+	r326 = string.gmatch
+	r327 = table.insert
+	r329 = table.sort
+	r330 = table.find
+	local r331
+	r331 = table.remove
+	local r332
+	r332 = table.concat
+	r333 = table.clone
+	local r334
+	r334 = table.clear
+	r335 = table.create
+	r336 = task.spawn
+	r337 = task.wait
+	local r338
+	r338 = task.cancel
+	r339 = task.delay
+	r340 = task.defer
+	r341 = r273.Heartbeat
+	r342 = r273.RenderStepped
+	r343 = r273.PreRender
+	r344 = debug.traceback
+	r1_2 = next
+	r178 = TweenInfo.new
+	r345 = os.clock
+	local r346
+	r346 = os.date
+	r347 = {}
+	local r349, r350, r358, r113_1
+
+	do
+		local r11 = { Micro = "micro.ttf", Minecraftia = "minecraftia.ttf", Monaco = "monaco.ttf", Nokia = "nokia.ttf", ["Smallest Pixel"] = "smallest_pixel-7.ttf", Tahoma = "fs-tahoma-8px.ttf", Verdana = "verdana.ttf" }
+
+		r348 = {
+			Micro = {
+				layout = 8,
+				top = 2,
+				size = 7,
+				label_padding = {
+					name_label = -2,
+					distance_label = 13,
+					weapon_label = 21,
+					health_flag = 8,
+				},
+			},
+			Minecraftia = {
+				layout = 10,
+				top = 3,
+				size = 10,
+				label_padding = {
+					name_label = -4,
+					distance_label = 14,
+					weapon_label = 24,
+					health_flag = 9,
+				},
+			},
+			Monaco = {
+				layout = 10,
+				top = 3,
+				size = 9,
+				label_padding = {
+					name_label = -5,
+					distance_label = 14,
+					weapon_label = 24,
+					health_flag = 9,
+				},
+			},
+			Nokia = {
+				layout = 10,
+				top = 4,
+				size = 9,
+				label_padding = {
+					name_label = -3,
+					distance_label = 15,
+					weapon_label = 25,
+					health_flag = 10,
+				},
+			},
+			["Smallest Pixel"] = {
+				layout = 8,
+				top = 1,
+				size = 9,
+				label_padding = {
+					name_label = -3,
+					distance_label = 12,
+					weapon_label = 20,
+					health_flag = 7,
+				},
+			},
+			Tahoma = {
+				layout = 12,
+				top = 3,
+				size = 12,
+				label_padding = {
+					name_label = -6,
+					distance_label = 14,
+					weapon_label = 26,
+					health_flag = 9,
+				},
+			},
+			Verdana = {
+				layout = 12,
+				top = 3,
+				size = 12,
+				label_padding = {
+					name_label = -6,
+					distance_label = 14,
+					weapon_label = 26,
+					health_flag = 9,
+				},
+			},
+		}
+
+		r98 = { "Micro", "Minecraftia", "Monaco", "Nokia", "Smallest Pixel", "Tahoma", "Verdana" }
+
+		local r12 = {
+			hitmarker_names = { "arrow", "outline_arrow", "box", "outline_box", "cross", "outline_cross", "diamond", "outline_diamond", "heart", "outline_heart", "plus", "outline_plus" },
+			image_names = {
+				"pointer",
+				"configurations",
+				"glow4",
+				"logo",
+				"main",
+				"output",
+				"playerlist",
+				"scroll",
+				"style",
+				"transparency",
+				"fov_glow",
+				"uaz",
+				"heli",
+				"exit",
+				"body",
+				"item",
+			},
+			sound_names = { "default", "experience", "halloween", "pride", "wood", "notification", "warning" },
+			hitsound_names = {
+				"amongus",
+				"ara",
+				"cod",
+				"coin",
+				"csgo",
+				"fatality",
+				"gamesense",
+				"landing",
+				"neverlose",
+				"noname",
+				"parry",
+				"rifk7",
+				"rust",
+				"snap",
+				"uwu",
+			},
+		}
+
+		local r107 = window_snap_left
+		local r108 = window_snap_right
+		local r109 = old_config
+		local r110 = config_holder
+		local r111 = intro
+		local r112 = font
+		local r113 = font2
+		local r114 = keybind_list
+		local r103 = player_indicator_frame
+		local r104 = inventory_viewer_frame
+		local r105 = session_data_frame
+		local r106 = look_vector_frame
+		local r102 = is_rainbow
+
+		r100 = {
+			script_version = "1.7c",
+			loading = true,
+			unloading = false,
+			directory = "backtrack_tech",
+			easing_style_index = { "Linear", "Sine", "Back", "Bounce", "Circular", "Cubic", "Elastic", "Exponential", "Quad", "Quart", "Quint" },
+			easing_direction_index = { "In", "Out", "InOut" },
+			module_names = { fonts = "backtrack_tech.fonts", configs = "backtrack_tech.configs", sounds = "backtrack_tech.sounds", images = "backtrack_tech.images", hitmarkers = "backtrack_tech.hitmarkers" },
+			checks = {
+				first_time = not isfolder("backtrack_tech"),
+				modules = {
+					fonts = isfolder("backtrack_tech/fonts"),
+					configs = isfolder("backtrack_tech/configs"),
+					sounds = isfolder("backtrack_tech/sounds"),
+					images = isfolder("backtrack_tech/images"),
+					hitmarkers = isfolder("backtrack_tech/hitmarkers"),
+				},
+			},
+			flags = {},
+			config_flags = {},
+			visible_flags = {},
+			guis = {},
+			connections = {},
+			notifications = {},
+			playerlist_data = {},
+			menu_opened,
+			r102,
+			r103,
+			r104,
+			r105,
+			r106,
+			r107,
+			r108,
+			r109,
+			r110,
+			r111,
+			r112,
+			r113,
+			r114,
+			binds = {},
+			watermark_outline,
+			r102,
+			r103,
+			r104,
+			r105,
+			r106,
+			windows = { main_window, style, configurations_holder, playerlist_holder, output },
+			copied_flag,
+			r102,
+			tweening_style = Enum.EasingStyle.Circular,
+			tweening_direction = Enum.EasingDirection.InOut,
+			tweening_speed = 0.15,
+			animation_frequency = 60,
+			last_update = 0,
+			last_update_slider = 0,
+			last_update_pointer = 0,
+			animation_speed = 1,
+			pointer_design = true,
+			watermark_options = { watermark_text = "backtrack.tech", private = true, version = true, fps = true, ping = true, uid = true, current_game = true, current_date = true, current_time = true },
+			user_stats = { fps = 0, ping = 0 },
+			colors = {
+				warning = r116(247, 215, 98),
+				information = r116(154, 135, 254),
+				fail = r116(255, 117, 129),
+				success = r116(122, 255, 117),
+			},
+			aerosnap = true,
+			sound_settings = { sound_type = "Default", sound_volume = 10 },
+			click_sounds = {},
+			images = {
+				hitmarkers = {},
+			},
+			display_orders = 0,
+			hitsounds = {},
+			inv_configuration = {
+				sections = { "Hotbar", "Armor", "Miscellaneous", "Containers" },
+				colors = { section_title = "#FFFFFF", stack = "#FFFFFF", amount = "#FFFFFF", item_name = "#FFFFFF", attachment = "#FFFFFF" },
+			},
+		}
+
+		r349 = r100.flags
+		r350 = r100.config_flags
+		r351 = {}
+
+		r352 = {
+			gradient_positions = {
+				{ 0, 1 },
+				{ 0, 1 },
+				{ 0, 0.5, 1 },
+			},
+			glow_shading_map = {
+				Default = Enum.AdornShading.XRay,
+				Occluded = Enum.AdornShading.Default,
+				Shaded = Enum.AdornShading.XRayShaded,
+			},
+		}
+
+		r353 = {}
+		r354 = {}
+		r355 = {}
+
+		r356 = {
+			enabled = false,
+			delay = 0.2,
+			high = r116(124, 255, 139),
+			low = r116(255, 72, 118),
+			use_tween = true,
+			style = "Circular",
+			direction = "InOut",
+			time = 0.15,
+		}
+
+		r357 = {
+			preset = {
+				outline = r297("#0A0A0A"),
+				inline = r297("#222222"),
+				accent = r297("#FF627F"),
+				high_contrast = r297("#0D0D0D"),
+				low_contrast = r297("#101010"),
+				text = r297("#E0E0E0"),
+				text_outline = r297("#000000"),
+				glow = r297("#FF627F"),
+			},
+			utility = {
+				outline = {
+					BackgroundColor3 = {},
+					Color = {},
+				},
+				inline = {
+					BackgroundColor3 = {},
+					ImageColor3 = {},
+					Color = {},
+				},
+				accent = {
+					BackgroundColor3 = {},
+					TextColor3 = {},
+					ImageColor3 = {},
+					ScrollBarImageColor3 = {},
+					Color = {},
+				},
+				contrast = {
+					Color = {},
+				},
+				text = {
+					TextColor3 = {},
+				},
+				text_outline = {
+					Color = {},
+				},
+				glow = {
+					ImageColor3 = {},
+					ImageTransparency = {},
+				},
+				high_contrast = {
+					BackgroundColor3 = {},
+				},
+				low_contrast = {
+					BackgroundColor3 = {},
+				},
+			},
+			find = { Frame = "BackgroundColor3", TextLabel = "TextColor3", UIGradient = "Color", UIStroke = "Color", ImageLabel = "ImageColor3", TextButton = "BackgroundColor3", ScrollingFrame = "ScrollBarImageColor3" },
+		}
+
+		r358 = {
+			[Enum.KeyCode.LeftShift] = "LS",
+			[Enum.KeyCode.RightShift] = "RS",
+			[Enum.KeyCode.LeftControl] = "LC",
+			[Enum.KeyCode.RightControl] = "RC",
+			[Enum.KeyCode.LeftAlt] = "LALT",
+			[Enum.KeyCode.RightAlt] = "RALT",
+			[Enum.KeyCode.CapsLock] = "CAPS",
+			[Enum.KeyCode.Insert] = "INS",
+			[Enum.KeyCode.Backspace] = "BS",
+			[Enum.KeyCode.Return] = "ENT",
+			[Enum.KeyCode.Escape] = "ESC",
+			[Enum.KeyCode.Space] = "SPC",
+			[Enum.KeyCode.Zero] = "0",
+			[Enum.KeyCode.One] = "1",
+			[Enum.KeyCode.Two] = "2",
+			[Enum.KeyCode.Three] = "3",
+			[Enum.KeyCode.Four] = "4",
+			[Enum.KeyCode.Five] = "5",
+			[Enum.KeyCode.Six] = "6",
+			[Enum.KeyCode.Seven] = "7",
+			[Enum.KeyCode.Eight] = "8",
+			[Enum.KeyCode.Nine] = "9",
+			[Enum.KeyCode.KeypadZero] = "NUM0",
+			[Enum.KeyCode.KeypadOne] = "NUM1",
+			[Enum.KeyCode.KeypadTwo] = "NUM2",
+			[Enum.KeyCode.KeypadThree] = "NUM3",
+			[Enum.KeyCode.KeypadFour] = "NUM4",
+			[Enum.KeyCode.KeypadFive] = "NUM5",
+			[Enum.KeyCode.KeypadSix] = "NUM6",
+			[Enum.KeyCode.KeypadSeven] = "NUM7",
+			[Enum.KeyCode.KeypadEight] = "NUM8",
+			[Enum.KeyCode.KeypadNine] = "NUM9",
+			[Enum.KeyCode.Minus] = "-",
+			[Enum.KeyCode.Equals] = "=",
+			[Enum.KeyCode.Tilde] = "~",
+			[Enum.KeyCode.Backquote] = "`",
+			[Enum.KeyCode.LeftBracket] = "[",
+			[Enum.KeyCode.RightBracket] = "]",
+			[Enum.KeyCode.LeftParenthesis] = "(",
+			[Enum.KeyCode.RightParenthesis] = ")",
+			[Enum.KeyCode.Semicolon] = ",",
+			[Enum.KeyCode.Quote] = "'",
+			[Enum.KeyCode.BackSlash] = "\\",
+			[Enum.KeyCode.Comma] = ",",
+			[Enum.KeyCode.Period] = ".",
+			[Enum.KeyCode.Slash] = "/",
+			[Enum.KeyCode.Asterisk] = "*",
+			[Enum.KeyCode.Plus] = "+",
+			[Enum.UserInputType.MouseButton1] = "LMB",
+			[Enum.UserInputType.MouseButton2] = "RMB",
+			[Enum.UserInputType.MouseButton3] = "MMB",
+		}
+
+		r100.active = {
+			resize = nil,
+			drag = nil,
+			slider = nil,
+			color = nil,
+			pending_bind = nil,
+			keybind_handlers = {},
+			keybind_hold_handlers = {},
+			slider_handlers = {},
+			tween_left = nil,
+			tween_right = nil,
+		}
+
+		r100.hierarchy = {
+			backtrack_tech = { "fonts", "configs", "sounds", "hitsounds", "images" },
+		}
+
+		r100.loading_data = { delay = 0.15, retries = 3, retry_delay = 1, needs_download = false }
+		r100.flash_data = {}
+		r100.color_animations = {}
+		r100.__index = r100
+
+		for r5, r6 in r1_2, r100.hierarchy, nil do
+			if not isfolder(r5) then
+				makefolder(r5)
+			end
+
+			for _, r9 in r1_2, r6, nil do
+				local r2 = r5 .. "/" .. r9
+
+				if not isfolder(r2) then
+					makefolder(r2)
+				end
+			end
+		end
+
+		if LRM_UserNote then
+			r113_1 = r10(LRM_UserNote, ",")
+		else
+			r113_1 = { "user", "unknown" }
+		end
+
+		r351.try_download = function(s10)
+			for s2 = 1, r100.loading_data.retries do
+				local s11, s12 = pcall(function()
+					return r269:HttpGet(s10)
+				end)
+
+				if s11 and s12 and #s12 > 0 then
+					return s12
+				end
+
+				if s2 < r100.loading_data.retries then
+					task.wait(r100.loading_data.retry_delay * s2)
+				end
+			end
+
+			return nil
+		end
+
+		r351.download_assets = function(s26, s27, s28)
+			local s2 = {
+				sounds = r100.click_sounds,
+				hitsounds = r100.hitsounds,
+				images = r100.images,
+				hitmarkers = r100.images.hitmarkers,
+			}
+
+			local s9 = "https://raw.githubusercontent.com/backtrack-tech/backtrack.tech/main/" .. (({ sounds = "storage", images = "storage", hitsounds = "hitsounds", hitmarkers = "hitmarkers" })[s27] or "storage") .. "/"
+			local s1_1 = r100.directory .. "/" .. s27
+			local s11 = s2[s27]
+			if not s11 then
+				return
+			end
+
+			if not isfolder(s1_1) then
+				makefolder(s1_1)
+			end
+
+			for _, s4 in r1_2, s26, nil do
+				local s24 = ("%s/%s%s"):format(s1_1, s4, s28)
+
+				if not isfile(s24) then
+					local s25 = r351.try_download(s9 .. s4 .. s28, s4)
+					if not s25 then
+						continue
+					end
+					local s22, s23 = pcall(writefile, s24, s25)
+					if not s22 then
+						warn("write failed: " .. s4 .. " | " .. r324(s23))
+						continue
+					end
+					task.wait(r100.loading_data.delay)
+				end
+
+				local s13 = nil
+
+				local s26_1, s27_1 = pcall(function()
+					s13 = getcustomasset(s24)
+				end)
+
+				if not s26_1 then
+					warn("asset load failed: " .. s4 .. " | " .. r324(s27_1))
+				else
+					s11[s4:gsub("_", " "):gsub("(%a)([%w_']*)", function(t6, t7)
+						return t6:upper() .. t7:lower()
+					end)] = s13
+				end
+			end
+		end
+
+		for _, r4_1 in r1_2, r12.sound_names, nil do
+			if not isfile(r100.directory .. "/sounds/" .. r4_1 .. ".mp3") then
+				r100.loading_data.needs_download = true
+				break
+			end
+		end
+
+		if not r100.loading_data.needs_download then
+			for _, r4_2 in r1_2, r12.hitsound_names, nil do
+				if not isfile(r100.directory .. "/hitsounds/" .. r4_2 .. ".mp3") then
+					r100.loading_data.needs_download = true
+					break
+				end
+			end
+		end
+
+		if not r100.loading_data.needs_download then
+			for _, r4_3 in r1_2, r12.image_names, nil do
+				if not isfile(r100.directory .. "/images/" .. r4_3 .. ".png") then
+					r100.loading_data.needs_download = true
+					break
+				end
+			end
+		end
+
+		if not r100.loading_data.needs_download then
+			for _, r4_4 in r1_2, r12.hitmarker_names, nil do
+				if not isfile(r100.directory .. "/hitmarkers/" .. r4_4 .. ".png") then
+					r100.loading_data.needs_download = true
+					break
+				end
+			end
+		end
+
+		if r100.loading_data.needs_download then
+			warn("[backtrack.tech:project_delta] downloading assets")
+		end
+
+		r351.download_assets(r12.sound_names, "sounds", ".mp3")
+		r351.download_assets(r12.hitsound_names, "hitsounds", ".mp3")
+		r351.download_assets(r12.image_names, "images", ".png")
+		r351.download_assets(r12.hitmarker_names, "hitmarkers", ".png")
+
+		r351.register_font = function(s33, s34, s35, s36)
+			local s1 = r100.directory .. "/fonts/"
+
+			if not isfolder(s1) then
+				makefolder(s1)
+			end
+
+			local s2 = s1 .. s36.id
+			local s3 = s1 .. s33 .. ".font"
+
+			if not isfile(s2) then
+				if not s36.font then
+					return
+				end
+				writefile(s2, s36.font)
+			end
+
+			if isfile(s3) then
+				delfile(s3)
+			end
+
+			local s4 = nil
+
+			local s36_1, s37 = pcall(function()
+				s4 = getcustomasset(s2)
+			end)
+
+			if not s36_1 then
+				warn("asset load failed: " .. s33 .. " | " .. r324(s37))
+				return
+			end
+
+			writefile(s3, r279:JSONEncode({
+				name = s33,
+				faces = {
+					{ name = "Normal", weight = s34, style = s35, assetId = s4 },
+				},
+			}))
+
+			return getcustomasset(s3)
+		end
+
+		for r11_1, r12_1 in r1_2, r11, nil do
+			local r53 = { id = r12_1, font = nil }
+
+			if not isfile(r12_1) then
+				local r2_1, r3_5 = pcall(function()
+					return r269:HttpGet("https://github.com/backtrack-tech/backtrack.tech/raw/main/fonts/" .. r12_1)
+				end)
+
+				if not r2_1 or not r3_5 then
+					warn("request failed: " .. r11_1)
+					continue
+				end
+				task.wait(r100.loading_data.delay)
+				r53.font = r3_5
+			else
+				local r2_3, r3_6 = pcall(readfile, r12_1)
+				if not r2_3 then
+					warn("read failed: " .. r11_1)
+					continue
+				end
+				r53.font = r3_6
+			end
+
+			local r49 = r351.register_font(r11_1, 400, "Normal", r53)
+
+			if r49 then
+				r347[r11_1] = Font.new(r49, Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+			end
+		end
+	end
+
+	r100.font = r347.Tahoma
+
+	r7 = function(s6, s7)
+		local s2 = Instance.new(s6)
+
+		for s10, s11 in r1_2, s7, nil do
+			s2[s10] = s11
+		end
+
+		if not s7.Name then
+			s2.Name = "\0"
+		end
+
+		return s2
+	end
+
+	r351.is_debug = function()
+		return getgenv().debug_load
+	end
+
+	if r351.is_debug() then
+		print("[backtrack.tech:project_delta] running debug on " .. r324(identifyexecutor() or "unknown executor"))
+		print("[backtrack.tech:project_delta] downloaded assets")
+		print("[backtrack.tech:project_delta] loading library functions")
+		r337(0.15)
+	end
+
+	r100.connection = function(arg1, arg2, s13)
+		local s11 = arg2:Connect(s13)
+		r327(r100.connections, s11)
+		return s11
+	end
+
+	r100.disconnect = function(s21, s22)
+		if s22 then
+			s22:Disconnect()
+
+			for s2, s3 in ipairs(s21.connections) do
+				if s3 == s22 then
+					r331(s21.connections, s2)
+					break
+				end
+			end
+		end
+	end
+
+	r100.tween = function(arg1, s21, s22, arg4)
+		local s1_1 = r179:Create(s21, r178(arg4 or r100.tweening_speed, r100.tweening_style, r100.tweening_direction, 0, false, 0), s22)
+		s1_1:Play()
+		return s1_1
+	end
+
+	r100.hoverify = function(arg1, s25, arg3)
+		local s1 = r100:create("Frame", {
+			Parent = arg3,
+			BackgroundTransparency = 1,
+			BorderColor3 = r116(0, 0, 0),
+			Size = r22(1, 0, 1, 0),
+			BorderSizePixel = 0,
+			BackgroundColor3 = r357.preset.accent,
+			ZIndex = 1,
+		})
+
+		r100:apply_theme(s1, "accent", "BackgroundColor3")
+
+		local function s2()
+			r100:connection(s25.MouseEnter, function()
+				r100:tween(s1, { BackgroundTransparency = 0 })
+			end)
+
+			r100:connection(s25.MouseLeave, function()
+				r100:tween(s1, { BackgroundTransparency = 1 })
+			end)
+		end
+
+		s2()
+		return s1
+	end
+
+	r100.hovering = function(arg1, s14)
+		if type(s14) == "table" then
+			for _, s16 in s14, nil, nil do
+				if r100:hovering(s16) then
+					return true
+				end
+			end
+
+			return
+		end
+
+		return s14.AbsolutePosition.Y <= r291.Y and r291.Y <= s14.AbsolutePosition.Y + s14.AbsoluteSize.Y and s14.AbsolutePosition.X <= r291.X and r291.X <= s14.AbsolutePosition.X + s14.AbsoluteSize.X
+	end
+
+	r100.convert_enum = function(arg1)
+		local s4 = {}
+
+		for s2 in r326(arg1, "[%w_]+") do
+			r327(s4, s2)
+		end
+
+		local s1 = Enum
+
+		for s2_1 = 2, #s4 do
+			s1 = s1[s4[s2_1]]
+		end
+
+		return s1
+	end
+
+	r100.config_list_update = function()
+		if not r100.config_holder then
+			return
+		end
+		local s15 = {}
+		local s3, s4 = listfiles(r100.directory .. "/configs")
+
+		for _, s4_1 in r1_2, s3, s4 do
+			s15[#s15 + 1] = r322(s4_1:gsub(r100.directory .. "/configs\\", ""):gsub(r100.directory .. "\\configs\\", ""), 1, -5)
+		end
+
+		r100.config_holder.refresh_options(s15)
+	end
+
+	r100.snap = function(s6, s7)
+		return r307(s6 - s7) <= 16 and s7 or s6
+	end
+
+	r100.animate_snapline = function(s25)
+		if r100.active.tween_left then
+			r100.active.tween_left:Cancel()
+		end
+
+		if r100.active.tween_right then
+			r100.active.tween_right:Cancel()
+		end
+
+		if s25 then
+			r100.window_snap_left.Size = r22(0, 1, 0, 0)
+			r100.window_snap_right.Size = r22(0, 0, 0, 1)
+			r100.window_snap_left.Visible = true
+			r100.window_snap_right.Visible = true
+			r100.window_snap_left.BackgroundTransparency = 1
+			r100.window_snap_right.BackgroundTransparency = 1
+			r100.active.tween_left = r179:Create(r100.window_snap_left, r178(0.1, r100.tweening_style, r100.tweening_direction), { BackgroundTransparency = 0 })
+			r100.active.tween_right = r179:Create(r100.window_snap_right, r178(0.1, r100.tweening_style, r100.tweening_direction), { BackgroundTransparency = 0 })
+			r100.active.tween_left:Play()
+			r100.active.tween_right:Play()
+
+			r339(0.1, function()
+				r100.active.tween_left = r179:Create(r100.window_snap_left, r178(0.2, r100.tweening_style, r100.tweening_direction), {
+					Size = r22(0, 1, 1, 0),
+				})
+
+				r100.active.tween_right = r179:Create(r100.window_snap_right, r178(0.2, r100.tweening_style, r100.tweening_direction), {
+					Size = r22(1, 0, 0, 1),
+				})
+
+				r100.active.tween_left:Play()
+				r100.active.tween_right:Play()
+			end)
+		else
+			r100.active.tween_left = r179:Create(r100.window_snap_left, r178(0.2, r100.tweening_style, r100.tweening_direction), {
+				Size = r22(0, 1, 0, 0),
+			})
+
+			r100.active.tween_right = r179:Create(r100.window_snap_right, r178(0.2, r100.tweening_style, r100.tweening_direction), {
+				Size = r22(0, 0, 0, 1),
+			})
+
+			r100.active.tween_left:Play()
+			r100.active.tween_right:Play()
+
+			r339(0.2, function()
+				local t6 = { BackgroundTransparency = 1 }
+				r100.active.tween_left = r179:Create(r100.window_snap_left, r178(0.1, r100.tweening_style, r100.tweening_direction), t6)
+				local t7 = { BackgroundTransparency = 1 }
+				r100.active.tween_right = r179:Create(r100.window_snap_right, r178(0.1, r100.tweening_style, r100.tweening_direction), t7)
+				r100.active.tween_left:Play()
+				r100.active.tween_right:Play()
+			end)
+
+			r339(0.3, function()
+				if not r100.active.drag then
+					r100.window_snap_left.Visible = false
+					r100.window_snap_right.Visible = false
+				end
+			end)
+		end
+	end
+
+	r100.ghost_frame = function(s37)
+		if not r100.snap_ghost then
+			local s4 = {}
+			r100.snap_ghost = r7("Frame", { BackgroundTransparency = 1, ZIndex = 999999 })
+
+			s4.inline = r7("UIStroke", {
+				Thickness = 1,
+				BorderOffset = r293(0, -1),
+				Color = r357.preset.outline,
+				Parent = r100.snap_ghost,
+			})
+
+			r100:apply_theme(s4.inline, "outline", "Color")
+
+			s4.outline = r7("UIStroke", {
+				Thickness = 1,
+				BorderOffset = r293(0, -3),
+				Color = r357.preset.outline,
+				Parent = r100.snap_ghost,
+			})
+
+			r100:apply_theme(s4.outline, "outline", "Color")
+
+			s4.accent = r7("UIStroke", {
+				Thickness = 1,
+				BorderOffset = r293(0, -2),
+				Color = r357.preset.accent,
+				Parent = r100.snap_ghost,
+			})
+
+			r100:apply_theme(s4.accent, "accent", "Color")
+		end
+
+		local s1 = r100.snap_ghost
+
+		r351.set_property_group(s1, {
+			Size = r22(0, s37.AbsoluteSize.X, 0, s37.AbsoluteSize.Y),
+			Position = s37.Position,
+			Parent = s37.Parent,
+			Visible = true,
+		})
+
+		return s1
+	end
+
+	local function r2_5()
+		r100.make_resizable = function(arg1, t29)
+			local t8 = t29.Size
+
+			local t30 = r100:create("TextButton", {
+				Position = r22(1, -10, 1, -10),
+				Size = r22(0, 10, 0, 10),
+				BorderSizePixel = 0,
+				BackgroundTransparency = 1,
+				Text = "",
+				Parent = t29,
+			})
+
+			local function t1()
+				r100:connection(t30.InputBegan, function(R)
+					if R.UserInputType ~= Enum.UserInputType.MouseButton1 or not r100.drag_enabled then
+						return
+					end
+
+					r100.active.resize = {
+						frame = t29,
+						start = R.Position,
+						start_size = t29.Size,
+						og_size = t8,
+						ghost_frame = r100.aerosnap and (r100.ghost_frame(t29)) or nil,
+					}
+				end)
+
+				r100:connection(t30.InputEnded, function(R)
+					if R.UserInputType ~= Enum.UserInputType.MouseButton1 or not r100.active.resize then
+						return
+					end
+					R = r100.active.resize
+					r100.active.resize = nil
+
+					if r100.aerosnap and R.ghost_frame then
+						R.frame.Size = R.ghost_frame.Size
+						R.ghost_frame.Visible = false
+					end
+				end)
+			end
+
+			t1()
+		end
+
+		r100.draggify = function(arg1, t33)
+			local function t1()
+				r100:connection(t33.InputBegan, function(R)
+					if R.UserInputType ~= Enum.UserInputType.MouseButton1 or not r100.drag_enabled then
+						return
+					end
+
+					r100.active.drag = {
+						frame = t33,
+						start = R.Position,
+						start_pos = t33.Position,
+						snap_timer = tick(),
+						snap_ready = false,
+						ghost_frame = r100.aerosnap and (r100.ghost_frame(t33)) or nil,
+					}
+
+					if r100.current_element_open then
+						r100.current_element_open.set_visible(false)
+						r100.current_element_open.open = false
+						r100.current_element_open = nil
+					end
+
+					if r155(t33.Parent, "ScreenGui") and t33.Parent.DisplayOrder ~= 9999999 then
+						r100.display_orders = r100.display_orders + 1
+						t33.Parent.DisplayOrder = r100.display_orders
+					end
+				end)
+
+				r100:connection(t33.InputEnded, function(R)
+					if R.UserInputType ~= Enum.UserInputType.MouseButton1 or not r100.active.drag then
+						return
+					end
+					R = r100.active.drag
+					r100.active.drag = nil
+					r100.animate_snapline(false)
+
+					if r100.aerosnap and R.ghost_frame then
+						R.frame.Position = R.ghost_frame.Position
+						R.ghost_frame.Visible = false
+					end
+				end)
+			end
+
+			t1()
+		end
+
+		r100.load_config = function(arg1, t17)
+			local t5 = r279:JSONDecode(t17)
+
+			for t3, t4 in r1_2, t5, nil do
+				local t6 = r100.config_flags[t3]
+
+				if t6 then
+					if type(t4) == "table" and t4.Transparency and t4.Color then
+						local t8 = t4.Transparency
+						t6(r297(t4.Color), t8)
+					else
+						t6(t4)
+					end
+				end
+			end
+
+			if t5.ui_positions then
+				r100.set_ui_transform(t5, "main", r100.windows.main_window.items.main_holder, true)
+				r100.set_ui_transform(t5, "style", r100.windows.style.get_main_holder(), true)
+				r100.set_ui_transform(t5, "config", r100.windows.configurations_holder.get_main_holder(), true)
+				local t8_1 = true
+				r100.set_ui_transform(t5, "player", r100.windows.playerlist_holder.get_main_holder(), t8_1)
+				r100.set_ui_transform(t5, "output", r100.windows.output.get_main_holder(), true)
+				r100.set_ui_transform(t5, "watermark", r100.watermark_outline, false)
+				r100.set_ui_transform(t5, "keybind", r100.keybind_list_frame, true)
+				r100.set_ui_transform(t5, "session_data", r100.session_data_frame, false)
+				r100.set_ui_transform(t5, "look_list", r100.look_vector_frame, false)
+				r100.set_ui_transform(t5, "player_indicator", r100.player_indicator_frame, false)
+				r100.set_ui_transform(t5, "inventory_viewer", r100.inventory_viewer_frame, true)
+			end
+		end
+
+		r100.get_config = function()
+			local t5 = {}
+
+			for t10, t11 in r1_2, r349, nil do
+				if type(t11) == "table" and t11.key then
+					t5[t10] = {
+						active = t11.active,
+						mode = t11.mode,
+						key = r324(t11.key),
+					}
+				elseif type(t11) == "table" and t11.Transparency and t11.Color then
+					t5[t10] = {
+						Transparency = t11.Transparency,
+						Color = t11.Color:ToHex(),
+					}
+				else
+					t5[t10] = t11
+				end
+			end
+
+			local t2_2 = {}
+
+			for t10_1, t11_1 in r1_2, {
+				main = r100.windows.main_window.items.main_holder,
+				style = r100.windows.style.get_main_holder(),
+				config = r100.windows.configurations_holder.get_main_holder(),
+				player = r100.windows.playerlist_holder.get_main_holder(),
+				output = r100.windows.output.get_main_holder(),
+				watermark = r100.watermark_outline,
+				keybind = r100.keybind_list_frame,
+				session_data = r100.session_data_frame,
+				look_list = r100.look_vector_frame,
+				player_indicator = r100.player_indicator_frame,
+				inventory_viewer = r100.inventory_viewer_frame,
+			}, nil do
+				t2_2[t10_1 .. "_position"] = r100.serialize_udim2(t11_1.Position)
+
+				if t10_1 ~= "watermark" and t10_1 ~= "hotbar" and t10_1 ~= "indicator" then
+					t2_2[t10_1 .. "_size"] = r100.serialize_udim2(t11_1.Size)
+				end
+			end
+
+			t5.ui_positions = t2_2
+			return r279:JSONEncode(t5)
+		end
+
+		r100.round = function(arg1, t6, t7)
+			local t2_1 = 1 / (t7 or 1)
+			return r305(t6 * t2_1 + 0.5) / t2_1
+		end
+	end
+
+	r2_5()
+
+	r100:connection(r276.InputChanged, function(R)
+		if R.UserInputType ~= Enum.UserInputType.MouseMovement then
+			return
+		end
+
+		if r100.active.resize then
+			local L = r100.active.resize
+			local k = r22(L.start_size.X.Scale, r311(L.start_size.X.Offset + (R.Position.X - L.start.X), L.og_size.X.Offset, r289.ViewportSize.X), L.start_size.Y.Scale, r311(L.start_size.Y.Offset + (R.Position.Y - L.start.Y), L.og_size.Y.Offset, r289.ViewportSize.Y))
+
+			if r100.aerosnap and L.ghost_frame then
+				L.ghost_frame.Size = k
+			else
+				L.frame.Size = k
+			end
+		end
+
+		if r100.active.drag then
+			local L, k = r100.active.drag, tick()
+
+			if not L.snap_ready and k - L.snap_timer >= 0.75 then
+				L.snap_ready = true
+				r100.animate_snapline(true)
+			end
+
+			local k, J, r, g, x = r289.ViewportSize, L.frame.Size.X.Offset, L.frame.Size.Y.Offset, L.start_pos.X.Offset + (R.Position.X - L.start.X), L.start_pos.Y.Offset + (R.Position.Y - L.start.Y)
+
+			if L.snap_ready then
+				local a, N = r305(k.X / 2 - J / 2 + 0.5), r305(k.Y / 2 - r / 2 - 59 + 0.5)
+				g, x = (r100.snap(r100.snap(r100.snap(g, 0), a), k.X - J)), (r100.snap(r100.snap(r100.snap(x, 0), N), k.Y - r))
+			end
+
+			g, x = r311(g, 0, r304(0, k.X - J)), r311(x, 0, r304(0, k.Y - r))
+
+			if r100.aerosnap and L.ghost_frame then
+				L.ghost_frame.Position = r22(0, g, 0, x)
+			else
+				L.frame.Position = r22(0, g, 0, x)
+			end
+		end
+
+		if r100.active.slider then
+			local L = r100.active.slider
+			if not r100.menu_opened or L.cfg.input_mode then
+				return
+			end
+			local k = (R.Position.X - L.slider.AbsolutePosition.X) / L.slider.AbsoluteSize.X
+			local R = r311((L.cfg.max - L.cfg.min) * k + L.cfg.min, L.cfg.min, L.cfg.max)
+			L.cfg.set(R)
+		end
+
+		if r100.active.color then
+			r100.active.color()
+		end
+	end)
+
+	r100:connection(r276.InputBegan, function(R, L)
+		if r100.active.pending_bind then
+			local k = R.UserInputType == Enum.UserInputType.Keyboard and R.KeyCode or R.UserInputType
+			r100.active.pending_bind(k)
+			r100.active.pending_bind = nil
+			return
+		end
+
+		if L then
+			return
+		end
+		local L = R.UserInputType == Enum.UserInputType.Keyboard and R.KeyCode or R.UserInputType
+
+		for k, k in r1_2, r100.active.keybind_handlers, nil do
+			k(L)
+		end
+
+		if R.UserInputType == Enum.UserInputType.MouseButton1 then
+			for L, L in r1_2, r100.active.slider_handlers, nil do
+				L(R)
+			end
+		end
+	end)
+
+	r100:connection(r276.InputEnded, function(R, L)
+		if R.UserInputType == Enum.UserInputType.MouseButton1 then
+			r100.active.slider = nil
+
+			for k, k in r1_2, r100.active.slider_handlers, nil do
+				k(nil)
+			end
+		end
+
+		if L then
+			return
+		end
+		L = R.UserInputType == Enum.UserInputType.Keyboard and R.KeyCode or R.UserInputType
+
+		for R, R in r1_2, r100.active.keybind_hold_handlers, nil do
+			R(L)
+		end
+	end)
+
+	r100.apply_theme = function(arg1, s21, s22, arg4)
+		r327(r357.utility[s22][arg4], s21)
+
+		if s22 == "glow" then
+			r327(r357.utility[s22].ImageTransparency, s21)
+		end
+	end
+
+	r100.update_theme = function(arg1, s32, s33, s34)
+		for s36, s37 in r1_2, r357.utility[s32], nil do
+			for _, s41 in r1_2, s37, nil do
+				if s41[s36] == r357.preset[s32] or s41.ClassName == "UIGradient" then
+					s41[s36] = s33
+				end
+
+				if s32 == "glow" and s34 then
+					s41.ImageTransparency = 1 - s34
+				end
+			end
+		end
+
+		r357.preset[s32] = s33
+	end
+
+	r100.apply_stroke = function(arg1, arg2)
+		r100:apply_theme(r100:create("UIStroke", {
+			Parent = arg2,
+			Color = r357.preset.text_outline,
+			LineJoinMode = Enum.LineJoinMode.Miter,
+		}), "text_outline", "Color")
+	end
+
+	r100.create = function(arg1, s29, s30)
+		local s35 = Instance.new(s29)
+
+		for s31, s32 in r1_2, s30, nil do
+			s35[s31] = s32
+		end
+
+		if s29 == "TextLabel" or s29 == "TextButton" or s29 == "TextBox" then
+			r100:apply_theme(s35, "text", "TextColor3")
+			r100:apply_stroke(s35)
+		elseif s29 == "ScreenGui" then
+			r327(r100.guis, s35)
+		end
+
+		return s35
+	end
+
+	r351.set_property = function(s22, s23, s24)
+		if s22[s23] ~= s24 then
+			s22[s23] = s24
+		end
+	end
+
+	r351.set_property_group = function(s35, arg2)
+		for s37, s38 in r1_2, arg2, nil do
+			if s35[s37] ~= s38 then
+				s35[s37] = s38
+			end
+		end
+	end
+
+	r351.set_enabled = function(s20, s21)
+		if s20.Enabled ~= s21 then
+			s20.Enabled = s21
+		end
+	end
+
+	r351.set_visible = function(s14, s15)
+		if s14.Visible ~= s15 then
+			s14.Visible = s15
+		end
+	end
+
+	r100.log_result = function(s13, s14, s15, s16, s17)
+		s14 = s14 or "<unknown>"
+		s15 = s15 or "<unknown>"
+		s16 = s16 or "<unknown>"
+		local s1 = not s13 and (s17 and r324(s17):gsub("\n", " "):gsub("%s+", " "):match("[^:]+: (.+)") or "Unknown error") or nil
+
+		if s13 then
+			r100:notification({
+				text = s14 .. " Configuration: " .. s16,
+				time = 3,
+				flashing = s14 == "Saved" or s14 == "Deleted",
+			})
+
+			r100.output.create_output({
+				text = "Successfully " .. s14:lower() .. " configuration: " .. s16,
+				prefix = "SUCCESS",
+				color = r100.colors.success,
+			})
+		else
+			r100:notification({
+				text = "Failed to " .. s15 .. " configuration: " .. s16,
+				time = 3,
+			})
+
+			r100.output.create_output({
+				text = "Failed to " .. s15 .. " configuration: " .. s16 .. " (" .. s1 .. ")",
+				prefix = "FAIL",
+				color = r100.colors.fail,
+			})
+		end
+	end
+
+	r100.serialize_udim2 = function(s34)
+		return {
+			ScaleX = s34.X.Scale,
+			OffsetX = s34.X.Offset,
+			ScaleY = s34.Y.Scale,
+			OffsetY = s34.Y.Offset,
+		}
+	end
+
+	r100.deserialize_udim2 = function(s36)
+		return r22(s36.ScaleX, s36.OffsetX, s36.ScaleY, s36.OffsetY)
+	end
+
+	r100.set_ui_transform = function(s14, s15, s16, s17)
+		if not s16 then
+			return
+		end
+		local s6 = r289.ViewportSize
+		local s2 = s16.Size
+
+		if s17 then
+			local s3 = s14.ui_positions[s15 .. "_size"]
+
+			if s3 then
+				local s3_1 = r100.deserialize_udim2(s3)
+
+				if s3_1 then
+					s16.Size = s3_1
+					s2 = s3_1
+				end
+			end
+		end
+
+		local s3_2 = s14.ui_positions[s15 .. "_position"]
+
+		if s3_2 then
+			local s8 = r100.deserialize_udim2(s3_2)
+
+			if s8 then
+				local s10 = s2.Y.Offset
+				local s2_1 = r311(s8.X.Offset, 0, s6.X - s2.X.Offset)
+				local s6_1 = r311(s8.Y.Offset, 0, s6.Y - s10)
+				s16.Position = r22(0, s2_1, 0, s6_1)
+			end
+		end
+	end
+
+	r100.to_hex = function(s29)
+		local s26 = r305(s29.R * 255)
+		local s27 = r305(s29.G * 255)
+		local s28 = r305(s29.B * 255)
+		return r323("#%02X%02X%02X", s26, s27, s28)
+	end
+
+	r100.sound = function(arg1, arg2)
+		local s1 = r7("Sound", {
+			SoundId = r100.click_sounds[arg1],
+			Volume = arg2,
+			Parent = gethui(),
+		})
+
+		s1:Play()
+
+		r100:connection(s1.Ended, function()
+			s1:Destroy()
+			return
+		end)
+	end
+
+	if r351.is_debug() then
+		print("[backtrack.tech:project_delta] loading ui")
+		r337(0.15)
+	end
+
+	r100.create_snapline = function()
+		local s8 = r7("ScreenGui", {
+			Parent = gethui(),
+			IgnoreGuiInset = true,
+			DisplayOrder = 9999999,
+			ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
+		})
+
+		r100.window_snap_left = r100:create("Frame", {
+			Parent = s8,
+			Position = r22(0.5, -1, 0, 0),
+			Size = r22(0, 1, 0, 0),
+			BorderSizePixel = 1,
+			BorderColor3 = r116(0, 0, 0),
+			BackgroundTransparency = 1,
+			BackgroundColor3 = r357.preset.accent,
+			Visible = false,
+		})
+
+		r100:apply_theme(r100.window_snap_left, "accent", "BackgroundColor3")
+
+		r100.window_snap_right = r100:create("Frame", {
+			Parent = s8,
+			Position = r22(0, 0, 0.5, -1),
+			Size = r22(0, 0, 0, 1),
+			BorderSizePixel = 1,
+			BorderColor3 = r116(0, 0, 0),
+			BackgroundTransparency = 1,
+			BackgroundColor3 = r357.preset.accent,
+			Visible = false,
+		})
+
+		r100:apply_theme(r100.window_snap_right, "accent", "BackgroundColor3")
+	end
+
+	r100.create_snapline()
+
+	do
+		local r8_1 = r100:create("ScreenGui", {
+			Enabled = true,
+			Parent = gethui(),
+			DisplayOrder = 9999999,
+		})
+
+		r100.tool_tip = function(arg1, s23)
+			local s11 = {
+				name = s23.name or "n/a",
+				path = s23.path,
+			}
+
+			if not s11.path then
+				return s11
+			end
+
+			local s20 = r100:create("Frame", {
+				Parent = r8_1,
+				Size = r22(0, 0, 0, 22),
+				Position = r22(0, 500, 0, 300),
+				BorderSizePixel = 0,
+				Visible = false,
+				AutomaticSize = Enum.AutomaticSize.X,
+				BackgroundColor3 = r357.preset.outline,
+				ZIndex = 999999995,
+			})
+
+			local s22 = r100:create("Frame", {
+				Parent = r100:create("Frame", {
+					Parent = s20,
+					Position = r22(0, 1, 0, 1),
+					BorderSizePixel = 0,
+					Size = r22(1, -2, 1, -2),
+					BackgroundColor3 = r357.preset.inline,
+					ZIndex = 999999996,
+				}),
+				Position = r22(0, 1, 0, 1),
+				BorderSizePixel = 0,
+				Size = r22(1, -2, 1, -2),
+				BackgroundColor3 = r116(255, 255, 255),
+				ZIndex = 999999997,
+			})
+
+			local s8 = 1
+			local s28 = "Color"
+
+			r100:apply_theme(r100:create("UIGradient", {
+				Parent = s22,
+				Color = r299({
+					r300(0, r116(41, 41, 55)),
+					r300(s8, r116(35, 35, 47)),
+				}),
+			}), "contrast", s28)
+
+			local s26 = r100:create("TextLabel", {
+				Parent = s22,
+				FontFace = r100.font,
+				TextColor3 = r357.preset.text,
+				Text = " " .. s11.name .. " ",
+				Size = r22(0, 0, 1, 0),
+				Position = r22(0, 0, 0, -1),
+				AutomaticSize = Enum.AutomaticSize.X,
+				BackgroundTransparency = 1,
+				TextSize = 12,
+				ZIndex = 999999997,
+			})
+
+			r100:create("UIPadding", {
+				Parent = s22,
+				PaddingRight = r293(0, 3),
+			})
+
+			r100:create("UIStroke", {
+				Parent = s26,
+				LineJoinMode = Enum.LineJoinMode.Miter,
+			})
+
+			local function s2()
+				r100:connection(s11.path.MouseEnter, function()
+					s20.Visible = true
+				end)
+
+				r100:connection(s11.path.MouseLeave, function()
+					s20.Visible = false
+				end)
+
+				r100:connection(r276.InputChanged, function(R)
+					if s20.Visible and R.UserInputType == Enum.UserInputType.MouseMovement then
+						s20.Position = r295(R.Position.X + 10, R.Position.Y + 10)
+					end
+				end)
+			end
+
+			s2()
+			return s11
+		end
+
+		r100.panel = function(arg1, s9)
+			local s20 = {
+				name = s9.text or s9.name or "Window",
+			}
+
+			s20.size = s9.size or r22(0, 530, 0, 590)
+			s20.position = s9.position or r22(0, 500, 0, 500)
+			s20.anchor_point = s9.anchor_point or r23(0, 0)
+			s20.default_position = nil
+			s20.image = s9.image or "rbxassetid://0"
+			s20.open = s9.open or true
+			s20.items = {}
+			local s22 = s20.items
+
+			s22.sgui = r100:create("ScreenGui", {
+				Enabled = true,
+				Parent = gethui(),
+			})
+
+			s22.main_holder = r100:create("Frame", {
+				Parent = s22.sgui,
+				AnchorPoint = s20.anchor_point,
+				Position = s20.position,
+				Active = true,
+				Size = s20.size,
+				BorderSizePixel = 0,
+				BackgroundColor3 = r357.preset.outline,
+			})
+
+			r100:apply_theme(s22.main_holder, "outline", "BackgroundColor3")
+			r100:draggify(s22.main_holder)
+			r100:make_resizable(s22.main_holder)
+
+			local s6 = r100:create("TextButton", {
+				Parent = s22.main_holder,
+				FontFace = r100.font,
+				AnchorPoint = r23(1, 0),
+				Text = "X",
+				Size = r22(0, 0, 0, 0),
+				Position = r22(1, -7, 0, 5),
+				BorderSizePixel = 0,
+				BackgroundTransparency = 1,
+				TextXAlignment = Enum.TextXAlignment.Right,
+				AutomaticSize = Enum.AutomaticSize.XY,
+				TextColor3 = r357.preset.text,
+				TextSize = 12,
+				ZIndex = 100,
+			})
+
+			r100:create("UIStroke", { Parent = s6 })
+
+			r100:connection(s6.MouseButton1Click, function()
+				s22.sgui.Enabled = false
+			end)
+
+			s22.window_inline = r100:create("Frame", {
+				Parent = s22.main_holder,
+				Position = r22(0, 1, 0, 1),
+				Size = r22(1, -2, 1, -2),
+				BorderSizePixel = 0,
+				BackgroundColor3 = r357.preset.accent,
+			})
+
+			r100:apply_theme(s22.window_inline, "accent", "BackgroundColor3")
+
+			s22.window_holder = r100:create("Frame", {
+				Parent = s22.window_inline,
+				Position = r22(0, 1, 0, 1),
+				Size = r22(1, -2, 1, -2),
+				BorderSizePixel = 0,
+				BackgroundColor3 = r116(255, 255, 255),
+			})
+
+			local s15 = 35
+			local s9_1 = "Color"
+
+			r100:apply_theme(r100:create("UIGradient", {
+				Parent = s22.window_holder,
+				Rotation = 90,
+				Color = r299({
+					r300(0, r116(41, 41, 55)),
+					r300(1, r116(35, s15, 47)),
+				}),
+			}), "contrast", s9_1)
+
+			s22.text = r100:create("TextLabel", {
+				Parent = s22.window_holder,
+				FontFace = r100.font,
+				TextColor3 = r357.preset.accent,
+				Text = s20.name,
+				BackgroundTransparency = 1,
+				Position = r22(0, 2, 0, 4),
+				AutomaticSize = Enum.AutomaticSize.XY,
+				TextSize = 12,
+			})
+
+			r100:apply_theme(s22.text, "accent", "TextColor3")
+
+			r100:create("UIStroke", {
+				Parent = s22.text,
+				LineJoinMode = Enum.LineJoinMode.Miter,
+			})
+
+			r100:create("UIPadding", {
+				Parent = s22.window_holder,
+				PaddingBottom = r293(0, 4),
+				PaddingRight = r293(0, 4),
+				PaddingLeft = r293(0, 4),
+			})
+
+			s22.outline = r100:create("Frame", {
+				Parent = s22.window_holder,
+				Position = r22(0, 0, 0, 18),
+				Size = r22(1, 0, 1, -18),
+				BorderSizePixel = 0,
+				BackgroundColor3 = r357.preset.inline,
+			})
+
+			r100:apply_theme(s22.outline, "inline", "BackgroundColor3")
+
+			s22.inline = r100:create("Frame", {
+				Parent = s22.outline,
+				Position = r22(0, 1, 0, 1),
+				Size = r22(1, -2, 1, -2),
+				BorderSizePixel = 0,
+				BackgroundColor3 = r357.preset.outline,
+			})
+
+			r100:apply_theme(s22.inline, "outline", "BackgroundColor3")
+
+			s22.holder = r100:create("Frame", {
+				Parent = s22.inline,
+				Position = r22(0, 1, 0, 1),
+				Size = r22(1, -2, 1, -2),
+				BorderSizePixel = 0,
+				BackgroundColor3 = r116(255, 255, 255),
+			})
+
+			r100:apply_theme(r100:create("UIGradient", {
+				Parent = s22.holder,
+				Rotation = 90,
+				Color = r299({
+					r300(0, r116(41, 41, 55)),
+					r300(1, r116(35, 35, 47)),
+				}),
+			}), "contrast", "Color")
+
+			r100:create("UIPadding", {
+				Parent = s22.holder,
+				PaddingTop = r293(0, 5),
+				PaddingBottom = r293(0, 5),
+				PaddingRight = r293(0, 5),
+				PaddingLeft = r293(0, 5),
+			})
+
+			s22.glow = r100:create("ImageLabel", {
+				Parent = s22.main_holder,
+				ImageColor3 = r357.preset.glow,
+				Image = r100.images.Glow4,
+				ScaleType = Enum.ScaleType.Slice,
+				SliceCenter = r294(r23(21, 21), r23(79, 79)),
+				BackgroundTransparency = 1,
+				ImageTransparency = 0.8,
+				Position = r22(0, -20, 0, -20),
+				Size = r22(1, 40, 1, 40),
+				ZIndex = 0,
+			})
+
+			r100:apply_theme(s22.glow, "glow", "ImageColor3")
+
+			s22.button = r100:create("TextButton", {
+				Parent = r100.dock_holder,
+				Text = "",
+				Size = r22(0, 25, 0, 25),
+				BorderSizePixel = 0,
+				TextColor3 = r116(0, 0, 0),
+				BackgroundColor3 = r357.preset.inline,
+			})
+
+			r100:apply_theme(s22.button, "inline", "BackgroundColor3")
+
+			local s7 = r100:create("Frame", {
+				Parent = s22.button,
+				Position = r22(0, 1, 0, 1),
+				Size = r22(1, -2, 1, -2),
+				BorderSizePixel = 0,
+				BackgroundColor3 = r357.preset.outline,
+			})
+
+			r100:apply_theme(s7, "outline", "BackgroundColor3")
+
+			local s8 = r100:create("Frame", {
+				Parent = s7,
+				Position = r22(0, 1, 0, 1),
+				Size = r22(1, -2, 1, -2),
+				BorderSizePixel = 0,
+				BackgroundColor3 = r357.preset.inline,
+			})
+
+			r100:apply_theme(s8, "inline", "BackgroundColor3")
+			local s5 = 41
+
+			r100:apply_theme(r100:create("UIGradient", {
+				Parent = s8,
+				Rotation = 90,
+				Color = r299({
+					r300(0, r116(35, 35, 47)),
+					r300(1, r116(s5, 41, 55)),
+				}),
+			}), "contrast", "Color")
+
+			s22.Icon = r100:create("ImageLabel", {
+				Parent = s8,
+				ImageColor3 = r357.preset.accent,
+				Image = s20.image,
+				ResampleMode = Enum.ResamplerMode.Pixelated,
+				BackgroundTransparency = 1,
+				Size = r22(1, 0, 1, 0),
+			})
+
+			r100:apply_theme(s22.Icon, "accent", "ImageColor3")
+
+			r100:create("UIPadding", {
+				Parent = s8,
+				PaddingTop = r293(0, 3),
+				PaddingBottom = r293(0, 3),
+				PaddingRight = r293(0, 3),
+				PaddingLeft = r293(0, 3),
+			})
+
+			r100:tool_tip({
+				name = s20.name,
+				path = s22.button,
+			})
+
+			s20.default_position = s22.main_holder.Position
+
+			s20.get_main_holder = function()
+				return s22.main_holder
+			end
+
+			s20.get_default_position = function()
+				return s20.default_position
+			end
+
+			r100:connection(s22.sgui:GetPropertyChangedSignal("Enabled"), function()
+				r351.set_property(s22.Icon, "ImageColor3", s22.sgui.Enabled and r357.preset.accent or r357.preset.inline)
+			end)
+
+			r100:connection(s22.button.MouseButton1Click, function()
+				s22.sgui.Enabled = not s22.sgui.Enabled
+				r100.sound(r100.sound_settings.sound_type, r100.sound_settings.sound_volume)
+			end)
+
+			return setmetatable(s20, r100)
+		end
+
+		local r9_1 = r100:create("ScreenGui", {
+			Enabled = false,
+			Parent = gethui(),
+			DisplayOrder = 9999999,
+		})
+
+		local r10_1 = r100:create("ScreenGui", {
+			Parent = gethui(),
+			IgnoreGuiInset = true,
+			DisplayOrder = 9999999,
+			ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
+		})
+
+		local function r2_6()
+			r100.window = function(arg1, t20)
+				local t19 = { opened = true }
+				local t64 = {}
+				local t3 = nil
+				local t21 = r100:create("BlurEffect", { Parent = r124, Enabled = true, Size = 0 })
+
+				r100.cache = r100:create("ScreenGui", {
+					Enabled = false,
+					Parent = gethui(),
+				})
+
+				local t6 = r7("ScreenGui", {
+					Enabled = true,
+					DisplayOrder = 99999999,
+					IgnoreGuiInset = true,
+					ZIndexBehavior = Enum.ZIndexBehavior.Global,
+					ResetOnSpawn = false,
+					Parent = gethui(),
+				})
+
+				local t8 = r7("TextButton", {
+					BackgroundTransparency = 1,
+					Size = r22(0, 0, 0, 0),
+					Text = "",
+					Modal = true,
+					Visible = false,
+					Parent = t6,
+				})
+
+				r100.pointer = r100:create("ImageLabel", {
+					Image = r100.images.Pointer,
+					ZIndex = 999999999,
+					ResampleMode = Enum.ResamplerMode.Pixelated,
+					Position = r22(0, 0, 0, 0),
+					BorderColor3 = r116(0, 0, 0),
+					ImageColor3 = r357.preset.accent,
+					Size = r22(0, 14, 0, 14),
+					BorderSizePixel = 0,
+					BackgroundTransparency = 1,
+					Parent = t6,
+				})
+
+				r100:apply_theme(r100.pointer, "accent", "ImageColor3")
+
+				r100:connection(r291.Move, function()
+					local u13 = r276:GetMouseLocation()
+
+					if r100.menu_opened then
+						if r100.pointer_design then
+							r351.set_property(r276, "MouseIconEnabled", false)
+							r351.set_visible(r100.pointer, true)
+							r351.set_property(r100.pointer, "Position", r22(0, u13.X, 0, u13.Y))
+						else
+							r351.set_property(r276, "MouseIconEnabled", true)
+							r351.set_visible(r100.pointer, false)
+						end
+					else
+						r351.set_visible(r100.pointer, false)
+					end
+				end)
+
+				t19.set_menu_visibility = function(u11)
+					t19.opened = u11
+					r100.menu_opened = u11
+
+					if u11 then
+						r351.set_property(r100.look_vector_frame, "BackgroundTransparency", 0.7)
+					else
+						r351.set_property(r100.look_vector_frame, "BackgroundTransparency", 1)
+					end
+
+					r351.set_visible(t8, u11)
+
+					if u11 then
+						for _, u15 in t64, nil, nil do
+							u15.Enabled = true
+							t64 = {}
+						end
+					else
+						for _, u15_1 in r100.guis, nil, nil do
+							if u15_1.Enabled then
+								u15_1.Enabled = false
+								r327(t64, u15_1)
+							end
+						end
+					end
+
+					r100:tween(t21, {
+						Size = u11 and (r349.menu_blur_size or 15) or 0,
+					})
+
+					t3.Visible = u11
+					r9_1.Enabled = true
+					r10_1.Enabled = true
+					r8_1.Enabled = true
+					r100.cache.Enabled = false
+
+					for _, u4 in r8_1:GetChildren() do
+						u4.Visible = false
+					end
+
+					if r100.current_element_open then
+						r100.current_element_open.set_visible(false)
+						r100.current_element_open.open = false
+						r100.current_element_open = nil
+					end
+				end
+
+				t3 = r100:create("Frame", {
+					Parent = r9_1,
+					Visible = true,
+					BorderColor3 = r116(0, 0, 0),
+					AnchorPoint = r23(0.5, 0),
+					Position = r22(0.5, 0, 1, -120),
+					Size = r22(0, 157, 0, 39),
+					BorderSizePixel = 0,
+					BackgroundColor3 = r357.preset.outline,
+				})
+
+				dock_glow = r100:create("ImageLabel", {
+					Parent = t3,
+					ImageColor3 = r357.preset.glow,
+					ScaleType = Enum.ScaleType.Slice,
+					BorderColor3 = r116(0, 0, 0),
+					BackgroundColor3 = r116(255, 255, 255),
+					Visible = true,
+					Image = r100.images.Glow4,
+					BackgroundTransparency = 1,
+					ImageTransparency = 0.8,
+					Position = r22(0, -20, 0, -20),
+					Size = r22(1, 40, 1, 40),
+					ZIndex = 0,
+					BorderSizePixel = 0,
+					SliceCenter = r294(r23(21, 21), r23(79, 79)),
+				})
+
+				r100:apply_theme(dock_glow, "glow", "ImageColor3")
+				r100:apply_theme(t3, "outline", "BackgroundColor3")
+				t3.Position = r22(0, t3.AbsolutePosition.X, 0, t3.AbsolutePosition.Y)
+				t3.AnchorPoint = r23(0, 0)
+				r100:draggify(t3)
+
+				local t27... (470 KB left) 
